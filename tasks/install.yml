@@ -1,0 +1,21 @@
+---
+- name: Add Jenkins Repo
+  yum_repository:
+    name: Jenkins Stable
+    description: Official Jenkins RHEL/CentOS Repository
+    baseurl: "{{ jenkins_repo_url }}"
+    gpgcheck: yes
+    gpgkey: "{{ jenkins_gpgkey_url }}"
+    enabled: yes
+  register: jenkinsrepoadded
+
+- name: Install Java
+  package:
+    name: "{{ java_pkg }}"
+    state: present
+
+- name: Install Jenkins
+  package:
+    name: jenkins
+    state: present
+  when: jenkinsrepoadded

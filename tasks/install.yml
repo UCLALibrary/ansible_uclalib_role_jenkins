@@ -1,7 +1,7 @@
 ---
 - name: Add Jenkins Repo
   yum_repository:
-    name: Jenkins Stable
+    name: jenkins-stable
     description: Official Jenkins RHEL/CentOS Repository
     baseurl: "{{ jenkins_repo_url }}"
     gpgcheck: yes

@@ -1,12 +1,13 @@
 Role Name [![Build Status](https://travis-ci.org/UCLALibrary/uclalib_role_template.svg?branch=master)](https://travis-ci.org/UCLALibrary/uclalib_role_template)
 =========
 
-A brief description of the role goes here.
+This role will configure a basic jenkins server.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Ansible 2.5.x+
+Epel repository
 
 Role Variables
 --------------
